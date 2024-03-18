@@ -18,7 +18,6 @@ Website for "FYC Fragancias", a mexican supplier of fragrances.
 
 ### Fonts ( public/fonts/ )
 
-- [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
 - [Lato](https://fonts.google.com/specimen/Lato)
 
 ## 🧞 Commands

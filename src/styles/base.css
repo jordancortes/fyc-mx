@@ -12,7 +12,7 @@
   }
 
   .main-nav > ol > li > a {
-    @apply font-display font-black text-base;
+    @apply font-extrabold;
   }
 
   .main-nav > ol > li > a:hover,
@@ -25,7 +25,7 @@
   }
 
   footer h5 {
-    @apply uppercase font-black font-display text-accent mb-1;
+    @apply uppercase font-extrabold text-accent mb-1;
   }
 
   footer ol,
@@ -34,20 +34,20 @@
   }
 
   .page-headline {
-    @apply text-accent uppercase font-bold text-3xl pt-22;
+    @apply text-accent uppercase font-black text-3xl pt-22;
   }
 
   .main-text {
-    @apply pl-4 font-serif text-sm space-y-4 mt-5 text-balance;
+    @apply pl-4 text-sm space-y-4 mt-5;
   }
 
   .main-text p {
-    @apply text-neutral-700;
+    @apply font-serif text-neutral-700;
   }
 
   .main-text > h4,
   form h4 {
-    @apply font-semibold font-display -ml-6 text-lg;
+    @apply font-extrabold -ml-6 text-lg;
   }
 
   .main-text > h4::before,
@@ -56,11 +56,11 @@
   }
 
   .badge {
-    @apply font-display font-semibold block rounded-md bg-accent px-2 py-1.5 text-xs text-white !mt-0.5 hover:bg-accent-light mr-5 tracking-wide;
+    @apply font-semibold block rounded-md bg-accent px-2 py-1.5 text-xs text-white !mt-0.5 hover:bg-accent-light mr-5 tracking-wide;
   }
 
   .main-text h5 {
-    @apply text-accent font-semibold border-dotted border-b-1 border-neutral-900 mb-1 mr-6;
+    @apply text-accent font-serif font-semibold border-dotted border-b-1 border-neutral-900 mb-1 mr-6;
   }
 
   #contact-form label {
@@ -80,7 +80,7 @@
   }
 
   .blog-post h5 {
-    @apply uppercase font-black font-display pt-5 text-sm;
+    @apply uppercase font-black pt-5 text-sm;
   }
 
   .blog-post p {
