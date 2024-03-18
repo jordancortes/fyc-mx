@@ -5,7 +5,7 @@ Website for "FYC Fragancias", a mexican supplier of fragrances.
 ## 🚀 Installation
 
 1. Clone this repository
-2. Download the missing [Resources](##%EF%B8%8F-resources) into the corresponding paths
+2. Download the missing [Resources](#%EF%B8%8F-resources) into the corresponding paths
 3. Install the dependencias via `npm install`
 4. Run the app with `npm run dev`
 
