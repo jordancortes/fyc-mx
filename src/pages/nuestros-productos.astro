@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/productos.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , current_page="nuestros-productos">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-4">
+      <h2 class="page-headline">
+        Nuestras<br />
+        Fragancias
+      </h2>
+    </div>
+    <div class="col-span-8">
+      <Image src={heroImage} alt="materia prima para fragancias" loading="eager" />
+      <div class="grid grid-cols-2">
+        <div class="main-text">
+          <h4>Nuestros Productos</h4>
+          <p>
+            Las fragancias desempeñan un papel primordial en la decisión de compra del consumidor final, es por eso que
+            estamos en constante actualización e innovación de nuestro catalogo de productos y nos aseguramos de
+            brindarle de la manera más eficiente un producto con calidad estandarizada y de primer nivel.
+          </p>
+          <p class="pb-2">Contamos con una gama muy extensa de fragancias para las diferentes aplicaciones:</p>
+          <span class="badge">Productos de Higiene para el hogar</span>
+          <span class="badge">Productos de Higiene Personal</span>
+          <span class="badge">Ambientación</span>
+          <span class="badge">Textiles</span>
+          <span class="badge">Velas</span>
+        </div>
+        <div class="main-text">
+          <h4>Servicios Adicionales</h4>
+          <span class="badge">Desarrollo de nuevas fragancias</span>
+          <span class="badge">Asesoría en tendencias de compras en el mercado a nuestros clientes</span>
+          <span class="badge">Soporte técnico a nuestros clientes</span>
+          <span class="badge">Consultoría</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

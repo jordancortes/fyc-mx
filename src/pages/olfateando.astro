@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/olfateando.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , current_page="olfateando">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-4">
+      <h2 class="page-headline">
+        Una pequeña<br />
+        guía para tí
+      </h2>
+    </div>
+    <div class="col-span-8">
+      <Image src={heroImage} alt="flores dentro de frasco de medición" loading="eager" />
+      <div class="grid grid-cols-2">
+        <div class="main-text">
+          <h4>Terminología básica</h4>
+          <hgroup>
+            <h5>Nota</h5>
+            <p>
+              Carácter de un olor, se utiliza para indicar la tonalidad de una fragancia en cualquiera de las 3 fases de
+              la misma: salida, cuerpo o fondo.
+            </p>
+          </hgroup>
+          <hgroup>
+            <h5>Nota de Salida</h5>
+            <p>La primera impresión que deja una fragancia al ser aplicada.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Nota de Cuerpo</h5>
+            <p>Proviene del carácter central de una fragancia, también conocida como nota de corazón.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Nota de Fondo</h5>
+            <p>Fase final de una fragancia, notas residuales.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Mouillette o tira olfativa</h5>
+            <p>
+              Tiras de papel secante utilizados para olfatear las fragancias y estudiar el comportamientoo de las mismas
+              a través del tiempo.
+            </p>
+          </hgroup>
+          <hgroup>
+            <h5>Fijación o Durabilidad</h5>
+            <p>Capacidad de la fragancia para conservar su escencia durante un cierto periodo.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Armonía</h5>
+            <p>Aplicado a las fragancias, se refiere a aquellas que reflejan unidad, acorde y orden.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Tonalidad</h5>
+            <p>Nota dominante de una fragancia.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Fuerza</h5>
+            <p>Intensidad relativa en la "salida" de una fragancia.</p>
+          </hgroup>
+        </div>
+        <div class="main-text">
+          <h4>Familias de Fragancias</h4>
+          <p class="pb-2">
+            Existen varias clasificaciones de familias de las fragancias, éstas son las 7 principales y de ellas se
+            derivan sub-familias y combinaciones de las mismas, lo que nos proporciona una gama infinita de fragancias a
+            explorar.
+          </p>
+          <span class="badge">Cítricos</span>
+          <span class="badge">Floral</span>
+          <span class="badge">Fougere</span>
+          <span class="badge">Chipre</span>
+          <span class="badge">Maderas</span>
+          <span class="badge">Ambar-Oriental</span>
+          <span class="badge">Piel</span>
+          <h4 class="-indent-3 mt-8">Recomendaciones para tus Fragancias</h4>
+          <p class="pb-2">Te recomendamos mantener las fragancias:</p>
+          <span class="badge">En lugares a temperatura ambiente</span>
+          <span class="badge">En envases cerrados</span>
+          <span class="badge">En lugares con poca luz directa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

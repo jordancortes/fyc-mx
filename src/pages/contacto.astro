@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/contacto.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , current_page="contacto">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-4">
+      <h2 class="page-headline">
+        Nos encantaría<br />
+        escucharte
+      </h2>
+    </div>
+    <div class="col-span-8">
+      <Image src={heroImage} alt="materia prima para fragancias" loading="eager" />
+      <form id="contact-form" class="grid grid-cols-2 mt-4" action="">
+        <div>
+          <h4>Forma de Contacto</h4>
+          <label for="field-name">Nombre.</label>
+          <input type="text" id="field-name" />
+          <label for="field-company">Empresa.</label>
+          <input type="text" id="field-company" />
+          <label for="field-email">Email.</label>
+          <input type="text" id="field-email" />
+          <label for="field-phone">Teléfono.</label>
+          <input type="text" id="field-phone" />
+        </div>
+        <div class="mt-33">
+          <label for="field-comments">Comentarios.</label>
+          <textarea
+            rows="8"
+            id="field-comments"
+            style="background: radial-gradient(circle at 0.5px 20.5px, black 1px, transparent 0); background-size: 2px 20px;"
+          ></textarea>
+          <input
+            type="submit"
+            class="uppercase bg-accent text-white font-bold font-display px-20 text-sm"
+            value="Enviar"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</Layout>

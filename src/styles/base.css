@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .main-nav > ol {
+    @apply flex justify-between;
+  }
+
+  .main-nav > ol > li {
+    @apply border-l-2 border-accent px-5 flex flex-col justify-between gap-y-7;
+  }
+
+  .main-nav > ol > li > a {
+    @apply font-display font-black text-base;
+  }
+
+  .main-nav > ol > li > a:hover,
+  .main-nav > ol > li > a.current {
+    @apply text-accent;
+  }
+
+  .main-nav > ol > li > p {
+    @apply font-serif text-xs italic;
+  }
+
+  footer h5 {
+    @apply uppercase font-black font-display text-accent mb-1;
+  }
+
+  footer ol,
+  footer address {
+    @apply font-serif text-xs italic;
+  }
+
+  .page-headline {
+    @apply text-accent uppercase font-bold text-3xl pt-22;
+  }
+
+  .main-text {
+    @apply pl-4 font-serif text-sm space-y-4 mt-5 text-balance;
+  }
+
+  .main-text p {
+    @apply text-neutral-700;
+  }
+
+  .main-text > h4,
+  form h4 {
+    @apply font-semibold font-display -ml-6 text-lg;
+  }
+
+  .main-text > h4::before,
+  form h4::before {
+    @apply content-bullet px-2;
+  }
+
+  .badge {
+    @apply font-display font-semibold block rounded-md bg-accent px-2 py-1.5 text-xs text-white !mt-0.5 hover:bg-accent-light mr-5 tracking-wide;
+  }
+
+  .main-text h5 {
+    @apply text-accent font-semibold border-dotted border-b-1 border-neutral-900 mb-1 mr-6;
+  }
+
+  #contact-form label {
+    @apply block font-serif text-sm;
+  }
+
+  #contact-form input {
+    @apply border-b-1 border-neutral-900 border-dotted w-4/5 mt-2 mb-6;
+  }
+
+  #contact-form textarea {
+    @apply w-full mb-6 text-accent font-serif text-sm resize-none;
+  }
+
+  .blog-post {
+    @apply col-span-7 border-t-1 border-dotted border-neutral-900 ml-4 space-y-4;
+  }
+
+  .blog-post h5 {
+    @apply uppercase font-black font-display pt-5 text-sm;
+  }
+
+  .blog-post p {
+    @apply font-serif text-sm;
+  }
+
+  .blog-post ul {
+    @apply font-serif text-sm list-disc;
+  }
+
+  .blog-post > blockquote > p {
+    @apply text-2xl italic font-semibold after:content-['"'] before:content-['"'];
+  }
+
+  .blog-post > blockquote > blockquote > p {
+    @apply before:content-['-'] text-right italic font-semibold mt-4;
+  }
+}

@@ -1,0 +1,36 @@
+---
+type Props = {
+  current_page: string;
+};
+
+const { current_page } = Astro.props;
+---
+
+<nav class="main-nav">
+  <ol>
+    <li>
+      <a class:list={[{ current: current_page == "index" }]} href="/">01. NOSOTROS</a>
+      <p>- Nuestra filosofía</p>
+    </li>
+    <li>
+      <a class:list={[{ current: current_page == "nuestros-productos" }]} href="/nuestros-productos"
+        ><div>02. NUESTROS</div><div class="ml-7 -mt-1">PRODUCTOS</div></a
+      >
+      <p>- Fragancias y Servicios</p>
+    </li>
+    <li>
+      <a class:list={[{ current: current_page == "olfateando" }]} href="/olfateando">03. OLFATEANDO</a>
+      <p>- Terminología y Recomendaciones</p>
+    </li>
+    <li>
+      <a class:list={[{ current: current_page == "blog" }]} href="/blog">04. BLOG</a>
+      <p>- Nuestra bitácora</p>
+    </li>
+    <li>
+      <a class:list={[{ current: current_page == "contacto" }]} href="/contacto">05. CONTACTO</a>
+      <p>- Información extra</p>
+    </li>
+  </ol>
+</nav>
+
+<style></style>

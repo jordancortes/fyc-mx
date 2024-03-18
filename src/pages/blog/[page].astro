@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import markdownit from "markdown-it";
+
+const md = markdownit();
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await Astro.glob("../../pages/blog/*.md");
+
+  function compareFn(a, b) {
+    if (
+      new Date(a.frontmatter.pubDate.toString().slice(0, 10)) >= new Date(b.frontmatter.pubDate.toString().slice(0, 10))
+    ) {
+      return -1;
+    }
+    return 1;
+  }
+  return paginate(posts.sort(compareFn), { pageSize: 3 });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="FYC Fragancias SA. de CV." , current_page="blog">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-4">
+      <h2 class="page-headline">
+        Preguntas,<br />
+        respuestas<br />
+        y tips para<br />
+        tu nariz
+      </h2>
+      <div class="mt-12">
+        <ul>
+          <li class="inline font-serif underline">{page.url.prev ? <a href={page.url.prev}>« Previous</a> : null}</li>
+          <li class="inline font-serif">
+            {page.url.current ? <a href={page.url.current}>{page.currentPage}</a> : null}
+          </li>
+          <li class="inline font-serif underline">{page.url.next ? <a href={page.url.next}>Next »</a> : null}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-span-8">
+      <ol>
+        {
+          page.data.map(({ url, rawContent, frontmatter }) => (
+            <div class="grid grid-cols-8">
+              <div class="flex justify-center mb-auto border-y-1 border-dotted border-neutral-900">
+                <img class="my-6" src={frontmatter.image.url} width="44" height="44" alt={frontmatter.image.alt} />
+              </div>
+              <div class="blog-post mb-12">
+                <div>
+                  <h5>
+                    <a class="hover:text-accent" href={url}>
+                      {frontmatter.title}
+                    </a>
+                  </h5>
+                  <small class="italic font-serif">
+                    -{" "}
+                    {Intl.DateTimeFormat("es-MX", { year: "numeric", month: "long", day: "numeric" }).format(
+                      new Date(frontmatter.pubDate.toString().slice(0, 10))
+                    )}
+                  </small>
+                </div>
+                <Fragment set:html={md.render(rawContent())} />
+              </div>
+            </div>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</Layout>

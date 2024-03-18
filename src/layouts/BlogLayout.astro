@@ -1,0 +1,37 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title="FYC Fragancias SA. de CV." current_page="blog">
+  <div class="grid grid-cols-3 py-5">
+    <div>
+      <h2 class="page-headline">
+        Preguntas,<br />
+        respuestas<br />
+        y tips para<br />
+        tu nariz
+      </h2>
+    </div>
+    <div class="col-span-2">
+      <div class="grid grid-cols-8">
+        <div class="flex justify-center mb-auto border-y-1 border-dotted border-neutral-900">
+          <img class="my-6" src={frontmatter.image.url} width="44" height="44" alt={frontmatter.image.alt} />
+        </div>
+        <div class="blog-post">
+          <div>
+            <h5>{frontmatter.title}</h5>
+            <small class="italic font-serif"
+              >- {
+                Intl.DateTimeFormat("es-MX", { year: "numeric", month: "long", day: "numeric" }).format(
+                  new Date(frontmatter.pubDate.toString().slice(0, 10))
+                )
+              }</small
+            >
+          </div>
+          <slot />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

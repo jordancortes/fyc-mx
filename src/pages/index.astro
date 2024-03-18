@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/home.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , current_page="index">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-4">
+      <h2 class="page-headline">
+        Somos<br />
+        Fabricantes<br />
+        Mexicanos
+      </h2>
+    </div>
+    <div class="col-span-8">
+      <Image src={heroImage} alt="logo fyc con fondo artistico" loading="eager" />
+      <div class="grid grid-cols-2">
+        <div class="main-text">
+          <h4>¿Quiénes somos?</h4>
+          <p>
+            FYC Fragancias SA. de CV. es una empresa mexicana dedicada a la fabricación de fragancias para uso
+            industrial.
+          </p>
+          <p>
+            Elaboramos una gran variedad de fragancias, utilizando materias primas de la más alta calidad. Somos capaces
+            de lograr cualquier aroma y remontarle por medio del olfato a sus más preciados recuerdos.
+          </p>
+          <p>
+            Ofrecemos a nuestros clientes los mejores productos del mercado, contamos con un estricto control de calidad
+            y la mejor tecnología para respaldarlo.
+          </p>
+        </div>
+        <div class="main-text">
+          <h4>Filosofía</h4>
+          <p>
+            Nuestro principal objetivo es la entera satisfacción de nuestros clientes. Por eso trabajamos en conjunto y
+            de forma personalizada con cada uno de ellos, sin importar tamaño, antigüedad o ubicación.
+          </p>
+          <p>
+            Creemos en el trabajo en equipo, el apoyo mutuo y la mejora continua para cumplir y elevar los estándares de
+            calidad y brindar un mejor servicio a nuestros clientes.
+          </p>
+          <p>Nuestro mayor deseo es crear y desarrollar relaciones profesionales de largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
