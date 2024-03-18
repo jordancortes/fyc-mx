@@ -22,13 +22,10 @@ export default {
         22: "5.50rem",
       },
       content: {
-        bullet: 'url("/bullet.png")',
+        bullet: 'url("/images/bullet.png")',
       },
       borderWidth: {
         1: "1px",
-      },
-      margin: {
-        33: "8.25rem",
       },
     },
   },
