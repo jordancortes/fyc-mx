@@ -29,6 +29,10 @@ Most common commands:
 | `npm run dev`   | Starts local dev server at `localhost:4321` |
 | `npm run build` | Build your production site to `./dist/`     |
 
+## 👨‍💻 Authors
+
+- Jordan Cortes [@jordanncg](https://twitter.com/jordanncg)
+
 ## 📝 License
 
 Third-party software components have their own licenses inside each pacakge.
