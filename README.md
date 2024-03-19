@@ -1,6 +1,17 @@
-# FYC
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/jordancortes/fyc-mx">
+   <img src="https://github.com/jordancortes/fyc-mx/blob/main/public/images/home.jpg?raw=true" alt="Logo">
+  </a>
 
-Website for "FYC Fragancias", a mexican supplier of fragrances.
+  <h2 align="center">FYC Fragancias SA. DE CV.</h2>
+
+  <p align="center">
+    Website for "FYC Fragancias", a mexican supplier of fragrances.
+    <br />
+    <a href="https://fyc.mx"><strong>Website »</strong></a>
+  </p>
+</p>
 
 ## 🚀 Installation
 
