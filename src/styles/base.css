@@ -34,7 +34,7 @@
   }
 
   .page-headline {
-    @apply text-accent uppercase font-black text-3xl pt-22;
+    @apply text-accent uppercase font-black text-center md:text-left text-5xl md:text-3xl py-8 md:pt-22;
   }
 
   .main-text {
@@ -68,7 +68,7 @@
   }
 
   #contact-form input {
-    @apply border-b-1 border-neutral-900 border-dotted w-4/5 mt-2 mb-6;
+    @apply border-b-1 border-neutral-900 border-dotted w-full md:w-4/5 mt-2 mb-6;
   }
 
   #contact-form textarea {

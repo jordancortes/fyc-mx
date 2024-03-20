@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 
 <Layout title="FYC Fragancias SA. de CV." current_page="blog">
   <div class="grid grid-cols-3 py-5">
-    <div>
+    <div class="col-span-3 md:col-span-1">
       <h2 class="page-headline">
         Preguntas,<br />
         respuestas<br />
@@ -13,9 +13,9 @@ const { frontmatter } = Astro.props;
         tu nariz
       </h2>
     </div>
-    <div class="col-span-2">
+    <div class="col-span-3 md:col-span-2">
       <div class="grid grid-cols-8">
-        <div class="flex justify-center mb-auto border-y-1 border-dotted border-neutral-900">
+        <div class="hidden md:flex justify-center mb-auto border-y-1 border-dotted border-neutral-900">
           <img class="my-6" src={frontmatter.image.url} width="44" height="44" alt={frontmatter.image.alt} />
         </div>
         <div class="blog-post">
