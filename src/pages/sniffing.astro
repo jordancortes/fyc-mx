@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/olfateando.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , lang="en" , current_page="sniffing">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-12 md:col-span-4">
+      <h2 class="page-headline">
+        A little guide<br />
+        for you
+      </h2>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <Image src={heroImage} alt="flores dentro de frasco de medición" loading="eager" />
+      <div class="grid grid-cols-2">
+        <div class="main-text">
+          <h4>Basic Terminology</h4>
+          <hgroup>
+            <h5>Note</h5>
+            <p>
+              Characteristic odour. Is used to indicate the tone of a fragrance in any of the 3 phases of the same: Top,
+              Middle or Base.
+            </p>
+          </hgroup>
+          <hgroup>
+            <h5>Top Note</h5>
+            <p>The first impression a fragrance leave right after being applied.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Middle Notes</h5>
+            <p>Comes from the central character of a fragrance, also known as heart note.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Base Notes</h5>
+            <p>Final phase of a fragrance, less volatile components.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Mouillette or Blotter</h5>
+            <p>Strips of an absorbent paper used to smell the fragrances and study them over their different phases.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Durability</h5>
+            <p>The ability of the fragrance to retain its essence for a certain period of time.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Armonía</h5>
+            <p>Aplicado a las fragancias, se refiere a aquellas que reflejan unidad, acorde y orden.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Harmony</h5>
+            <p>Applied to fragrances, refers to those that reflect unity.</p>
+          </hgroup>
+          <hgroup>
+            <h5>Character</h5>
+            <p>Dominant note of a fragrance.</p>
+          </hgroup>
+        </div>
+        <div class="main-text">
+          <h4>Fragance Families</h4>
+          <p class="pb-2">
+            There are several classifications of fragrance families, these are the top 7. They also have sub-families
+            and combinations derived from them, which provides an infinite range of fragrances to explore.
+          </p>
+          <span class="badge !mt-4">Citrus</span>
+          <span class="badge">Floral</span>
+          <span class="badge">Fougere</span>
+          <span class="badge">Chypre</span>
+          <span class="badge">Woody</span>
+          <span class="badge">Amber-Oriental</span>
+          <span class="badge">Leather</span>
+          <h4 class="-indent-3 mt-8">Recommendations</h4>
+          <p class="pb-2">We recommend you to keep the fragances:</p>
+          <span class="badge !mt-4">In places with enviromental temperature</span>
+          <span class="badge">Closed containers</span>
+          <span class="badge">In places with low sunlight</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

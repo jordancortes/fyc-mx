@@ -10,6 +10,6 @@ export default defineConfig({
     }),
   ],
   redirects: {
-    "/blog": "/blog/1",
+    "/blog/1": "/blog/es-1",
   },
 });

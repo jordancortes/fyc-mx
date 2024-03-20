@@ -1,7 +1,9 @@
 ---
-type Props = {};
+type Props = {
+  lang: string;
+};
 
-const {} = Astro.props;
+const { lang } = Astro.props;
 ---
 
 <footer>
@@ -11,7 +13,7 @@ const {} = Astro.props;
         <img src="/images/hearty.png" alt="icono corazon" loading="lazy" />
       </div>
       <div>
-        <h5>Síguenos</h5>
+        {lang == "es" ? <h5>Síguenos</h5> : <h5>Follow us</h5>}
         <ol>
           <li>Facebook</li>
           <li><a href="http://twitter.com/fycsa" class="underline">Twitter</a></li>
@@ -26,7 +28,7 @@ const {} = Astro.props;
     </div>
     <div class="border-dotted border-t border-neutral-900 flex pt-8 justify-between grow pr-16">
       <div>
-        <h5>D</h5>
+        {lang == "es" ? <h5>D</h5> : <h5>ADDRESS</h5>}
         <address>
           Edison 2607 Nte<br />
           Col. Garza Nieto<br />
@@ -35,7 +37,7 @@ const {} = Astro.props;
         </address>
       </div>
       <div>
-        <h5>T</h5>
+        {lang == "es" ? <h5>T</h5> : <h5>PHONE</h5>}
         <ol>
           <li>(81) 8347 7311</li>
           <li>(81) 8347 0731</li>
@@ -44,7 +46,7 @@ const {} = Astro.props;
         </ol>
       </div>
       <div>
-        <h5>O</h5>
+        {lang == "es" ? <h5>O</h5> : <h5>EMAIL</h5>}
         <ol>
           <li>hola@fyc.mx</li>
           <li>fragancias@prodigy.net.mx</li>

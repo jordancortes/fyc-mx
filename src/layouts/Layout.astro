@@ -7,9 +7,10 @@ import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   current_page: string;
+  lang: string;
 }
 
-const { title, current_page } = Astro.props;
+const { title, lang, current_page } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,17 +19,16 @@ const { title, current_page } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="FYC Fragancias SA. de CV." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="flex flex-col justify-between min-h-screen">
     <div class="md:container md:max-w-screen-lg md:mx-auto md:px-6">
-      <Header />
-      <Navigation current_page={current_page} />
+      <Header current_page={current_page} />
+      <Navigation lang={lang} current_page={current_page} />
       <slot />
     </div>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
-<style></style>

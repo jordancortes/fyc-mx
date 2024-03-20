@@ -1,7 +1,9 @@
 ---
-type Props = {};
+type Props = {
+  current_page: string;
+};
 
-const {} = Astro.props;
+const { current_page } = Astro.props;
 ---
 
 <header class="flex justify-between my-24">
@@ -13,10 +15,66 @@ const {} = Astro.props;
     <p class="font-serif italic text-xs">- Monterrey, Mx</p>
   </hgroup>
   <div>
-    <div class="flex justify-between">
-      <a href="/"><img src="/images/es-s.gif" alt="idioma español" /></a>
-      <a href="/"><img src="/images/en-s.gif" alt="language english" /></a>
-    </div>
+    {
+      (current_page == "index" || current_page == "about") && (
+        <div class="flex justify-between">
+          <a href="/">
+            <img src="/images/es-s.gif" alt="idioma español" />
+          </a>
+          <a href="/about">
+            <img src="/images/en-s.gif" alt="language english" />
+          </a>
+        </div>
+      )
+    }
+    {
+      (current_page == "nuestros-productos" || current_page == "products") && (
+        <div class="flex justify-between">
+          <a href="/nuestros-productos">
+            <img src="/images/es-s.gif" alt="idioma español" />
+          </a>
+          <a href="/products">
+            <img src="/images/en-s.gif" alt="language english" />
+          </a>
+        </div>
+      )
+    }
+    {
+      (current_page == "olfateando" || current_page == "sniffing") && (
+        <div class="flex justify-between">
+          <a href="/olfateando">
+            <img src="/images/es-s.gif" alt="idioma español" />
+          </a>
+          <a href="/sniffing">
+            <img src="/images/en-s.gif" alt="language english" />
+          </a>
+        </div>
+      )
+    }
+    {
+      current_page == "blog" && (
+        <div class="flex justify-between">
+          <a href="/blog/es-1">
+            <img src="/images/es-s.gif" alt="idioma español" />
+          </a>
+          <a href="/blog/en-1">
+            <img src="/images/en-s.gif" alt="language english" />
+          </a>
+        </div>
+      )
+    }
+    {
+      (current_page == "contacto" || current_page == "contact") && (
+        <div class="flex justify-between">
+          <a href="/contacto">
+            <img src="/images/es-s.gif" alt="idioma español" />
+          </a>
+          <a href="/contact">
+            <img src="/images/en-s.gif" alt="language english" />
+          </a>
+        </div>
+      )
+    }
     <span class="font-serif italic text-xs">- hola@fyc.mx</span>
   </div>
 </header>

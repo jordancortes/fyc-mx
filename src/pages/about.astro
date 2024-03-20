@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroImage from "../../public/images/home.jpg";
+---
+
+<Layout title="FYC Fragancias SA. de CV." , lang="en" , current_page="about">
+  <div class="grid grid-cols-12 py-5">
+    <div class="col-span-12 md:col-span-4">
+      <h2 class="page-headline">
+        We are mexican<br />
+        producers
+      </h2>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <Image src={heroImage} alt="logo fyc con fondo artistico" loading="eager" />
+      <div class="grid grid-cols-2">
+        <div class="main-text">
+          <h4>Who we are</h4>
+          <p>
+            FYC Fragancias is a mexican supplier of fragrances. We create, develop and produce a wide variety of
+            fragrances using top quality raw materials.
+          </p>
+          <p>
+            We are able to create every aroma and trace you to your fondest memories. We offer to our clients the best
+            products in the market as we have a strict quality control and the best technology to support it.
+          </p>
+        </div>
+        <div class="main-text">
+          <h4>Philosophy</h4>
+          <p>
+            Our main objective is the satisfaction of our customers. So we work together and in a customized way with
+            every of them, regardless of size, time in the market or location.
+          </p>
+          <p>
+            We believe in mutual support and continuous improvement to meet and raise quality standards and provide
+            better service to our customers.
+          </p>
+          <p>Our greatest desire is to create and develop long-term professional relationships.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
